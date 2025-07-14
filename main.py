@@ -192,25 +192,25 @@ if __name__=='__main__':
     runs = 5
     epochs = 1000
 
-    # print("="*20, "LSTMmodel-90days", "="*20)
-    # lstm_mse_scores_90days, lstm_mae_scores_90days, lstm_mape_scores_90days, lstm_r2_scores_90days = multi_runs(model_name="lstm",runs=runs, epochs=epochs, lr=5e-6, output_len=90, input_dim=input_dim, train_loader=train_loader_90, test_loader=test_loader_90)
-    # # --- 结果汇总 ---
-    # print("\n--- Final LSTM Results ---")
-    # print(f"Prediction Length: {90} days")
-    # print(f"Average MSE: {np.mean(lstm_mse_scores_90days):.6f} ± {np.std(lstm_mse_scores_90days):.6f}")
-    # print(f"Average MAE: {np.mean(lstm_mae_scores_90days):.6f} ± {np.std(lstm_mae_scores_90days):.6f}")
-    # print(f"Average MAPE: {np.mean(lstm_mape_scores_90days):.6f} ± {np.std(lstm_mape_scores_90days):.6f}")
-    # print(f"Average R2: {np.mean(lstm_r2_scores_90days):.6f} ± {np.std(lstm_r2_scores_90days):.6f}")
+    print("="*20, "LSTMmodel-90days", "="*20)
+    lstm_mse_scores_90days, lstm_mae_scores_90days, lstm_mape_scores_90days, lstm_r2_scores_90days = multi_runs(model_name="lstm",runs=runs, epochs=epochs, lr=5e-6, output_len=90, input_dim=input_dim, train_loader=train_loader_90, test_loader=test_loader_90)
+    # --- 结果汇总 ---
+    print("\n--- Final LSTM Results ---")
+    print(f"Prediction Length: {90} days")
+    print(f"Average MSE: {np.mean(lstm_mse_scores_90days):.6f} ± {np.std(lstm_mse_scores_90days):.6f}")
+    print(f"Average MAE: {np.mean(lstm_mae_scores_90days):.6f} ± {np.std(lstm_mae_scores_90days):.6f}")
+    print(f"Average MAPE: {np.mean(lstm_mape_scores_90days):.6f} ± {np.std(lstm_mape_scores_90days):.6f}")
+    print(f"Average R2: {np.mean(lstm_r2_scores_90days):.6f} ± {np.std(lstm_r2_scores_90days):.6f}")
 
-    # print("="*20, "Transformermodel-90days", "="*20)
-    # transformer_mse_scores_90days, transformer_mae_scores_90days, transformer_mape_scores_90days, transformer_r2_scores_90days = multi_runs(model_name="transformer",runs=runs, epochs=epochs, lr=5e-6, output_len=90, input_dim=input_dim, train_loader=train_loader_90, test_loader=test_loader_90)
-    # # --- 结果汇总 ---
-    # print("\n--- Final Transformer Results ---")
-    # print(f"Prediction Length: {90} days")
-    # print(f"Average MSE: {np.mean(transformer_mse_scores_90days):.6f} ± {np.std(transformer_mse_scores_90days):.6f}")
-    # print(f"Average MAE: {np.mean(transformer_mae_scores_90days):.6f} ± {np.std(transformer_mae_scores_90days):.6f}")
-    # print(f"Average MAPE: {np.mean(transformer_mape_scores_90days):.6f} ± {np.std(transformer_mape_scores_90days):.6f}")
-    # print(f"Average R2: {np.mean(transformer_r2_scores_90days):.6f} ± {np.std(transformer_r2_scores_90days):.6f}")
+    print("="*20, "Transformermodel-90days", "="*20)
+    transformer_mse_scores_90days, transformer_mae_scores_90days, transformer_mape_scores_90days, transformer_r2_scores_90days = multi_runs(model_name="transformer",runs=runs, epochs=epochs, lr=5e-6, output_len=90, input_dim=input_dim, train_loader=train_loader_90, test_loader=test_loader_90)
+    # --- 结果汇总 ---
+    print("\n--- Final Transformer Results ---")
+    print(f"Prediction Length: {90} days")
+    print(f"Average MSE: {np.mean(transformer_mse_scores_90days):.6f} ± {np.std(transformer_mse_scores_90days):.6f}")
+    print(f"Average MAE: {np.mean(transformer_mae_scores_90days):.6f} ± {np.std(transformer_mae_scores_90days):.6f}")
+    print(f"Average MAPE: {np.mean(transformer_mape_scores_90days):.6f} ± {np.std(transformer_mape_scores_90days):.6f}")
+    print(f"Average R2: {np.mean(transformer_r2_scores_90days):.6f} ± {np.std(transformer_r2_scores_90days):.6f}")
 
     
     print("="*20, "CNN-GRU-Transformer-90days", "="*20)
@@ -229,35 +229,35 @@ if __name__=='__main__':
     test_loader_365 = DataLoader(test_tensor_365, batch_size = 64, shuffle = False)
 
 
-    # print("="*20, "LSTMmodel-365days", "="*20)
-    # lstm_mse_scores_365days, lstm_mae_scores_365days, lstm_mape_scores_365days, lstm_r2_scores_365days = multi_runs(model_name="lstm",runs=runs, epochs=epochs, lr=1e-6, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
-    # # --- 结果汇总 ---
-    # print("\n--- Final LSTM Results ---")
-    # print(f"Prediction Length: {365} days")
-    # print(f"Average MSE: {np.mean(lstm_mse_scores_365days):.6f} ± {np.std(lstm_mse_scores_365days):.6f}")
-    # print(f"Average MAE: {np.mean(lstm_mae_scores_365days):.6f} ± {np.std(lstm_mae_scores_365days):.6f}")
-    # print(f"Average MAPE: {np.mean(lstm_mape_scores_365days):.6f} ± {np.std(lstm_mape_scores_365days):.6f}")
-    # print(f"Average R2: {np.mean(lstm_r2_scores_365days):.6f} ± {np.std(lstm_r2_scores_365days):.6f}")
+    print("="*20, "LSTMmodel-365days", "="*20)
+    lstm_mse_scores_365days, lstm_mae_scores_365days, lstm_mape_scores_365days, lstm_r2_scores_365days = multi_runs(model_name="lstm",runs=runs, epochs=epochs, lr=1e-6, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
+    # --- 结果汇总 ---
+    print("\n--- Final LSTM Results ---")
+    print(f"Prediction Length: {365} days")
+    print(f"Average MSE: {np.mean(lstm_mse_scores_365days):.6f} ± {np.std(lstm_mse_scores_365days):.6f}")
+    print(f"Average MAE: {np.mean(lstm_mae_scores_365days):.6f} ± {np.std(lstm_mae_scores_365days):.6f}")
+    print(f"Average MAPE: {np.mean(lstm_mape_scores_365days):.6f} ± {np.std(lstm_mape_scores_365days):.6f}")
+    print(f"Average R2: {np.mean(lstm_r2_scores_365days):.6f} ± {np.std(lstm_r2_scores_365days):.6f}")
 
     
-    # print("="*20, "Transformermodel-365days", "="*20)
-    # transformer_mse_scores_365days, transformer_mae_scores_365days, transformer_mape_scores_365days, transformer_r2_scores_365days = multi_runs(model_name="transformer",runs=runs, epochs=epochs, lr=1e-4, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
-    # # --- 结果汇总 ---
-    # print("\n--- Final Transformer Results ---")
-    # print(f"Prediction Length: {365} days")
-    # print(f"Average MSE: {np.mean(transformer_mse_scores_365days):.6f} ± {np.std(transformer_mse_scores_365days):.6f}")
-    # print(f"Average MAE: {np.mean(transformer_mae_scores_365days):.6f} ± {np.std(transformer_mae_scores_365days):.6f}")
-    # print(f"Average MAPE: {np.mean(transformer_mape_scores_365days):.6f} ± {np.std(transformer_mape_scores_365days):.6f}")
-    # print(f"Average R2: {np.mean(transformer_r2_scores_365days):.6f} ± {np.std(transformer_r2_scores_365days):.6f}")
+    print("="*20, "Transformermodel-365days", "="*20)
+    transformer_mse_scores_365days, transformer_mae_scores_365days, transformer_mape_scores_365days, transformer_r2_scores_365days = multi_runs(model_name="transformer",runs=runs, epochs=epochs, lr=1e-4, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
+    # --- 结果汇总 ---
+    print("\n--- Final Transformer Results ---")
+    print(f"Prediction Length: {365} days")
+    print(f"Average MSE: {np.mean(transformer_mse_scores_365days):.6f} ± {np.std(transformer_mse_scores_365days):.6f}")
+    print(f"Average MAE: {np.mean(transformer_mae_scores_365days):.6f} ± {np.std(transformer_mae_scores_365days):.6f}")
+    print(f"Average MAPE: {np.mean(transformer_mape_scores_365days):.6f} ± {np.std(transformer_mape_scores_365days):.6f}")
+    print(f"Average R2: {np.mean(transformer_r2_scores_365days):.6f} ± {np.std(transformer_r2_scores_365days):.6f}")
 
     
-    # print("="*20, "CNN-GRU-Transformer-365days", "="*20)
-    # gru_mse_scores_365days, gru_mae_scores_365days, gru_mape_scores_365days, gru_r2_scores_365days = multi_runs(model_name="cnn_gru_transformer", runs=runs, epochs=epochs, lr=5e-6, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
+    print("="*20, "CNN-GRU-Transformer-365days", "="*20)
+    gru_mse_scores_365days, gru_mae_scores_365days, gru_mape_scores_365days, gru_r2_scores_365days = multi_runs(model_name="cnn_gru_transformer", runs=runs, epochs=epochs, lr=5e-6, output_len=365, input_dim=input_dim, train_loader=train_loader_365, test_loader=test_loader_365)
     
-    # # --- 结果汇总 ---
-    # print(f"\n--- Final CNN-GRU-Transformer  Results ({365} days) ---")
-    # print(f"Average MSE: {np.mean(gru_mse_scores_365days):.6f} ± {np.std(gru_mse_scores_365days):.6f}")
-    # print(f"Average MAE: {np.mean(gru_mae_scores_365days):.6f} ± {np.std(gru_mae_scores_365days):.6f}")
-    # print(f"Average MAPE: {np.mean(gru_mape_scores_365days):.6f} ± {np.std(gru_mape_scores_365days):.6f}")
-    # print(f"Average R2: {np.mean(gru_r2_scores_365days):.6f} ± {np.std(gru_r2_scores_365days):.6f}")
+    # --- 结果汇总 ---
+    print(f"\n--- Final CNN-GRU-Transformer  Results ({365} days) ---")
+    print(f"Average MSE: {np.mean(gru_mse_scores_365days):.6f} ± {np.std(gru_mse_scores_365days):.6f}")
+    print(f"Average MAE: {np.mean(gru_mae_scores_365days):.6f} ± {np.std(gru_mae_scores_365days):.6f}")
+    print(f"Average MAPE: {np.mean(gru_mape_scores_365days):.6f} ± {np.std(gru_mape_scores_365days):.6f}")
+    print(f"Average R2: {np.mean(gru_r2_scores_365days):.6f} ± {np.std(gru_r2_scores_365days):.6f}")
 
